@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
@@ -9,7 +9,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}
+} */
 /* 
 body {
   display: flex;
@@ -20,7 +20,7 @@ body {
   font-family: "Inter", sans-serif;
   margin-top: 5%;
 } */
-@media (max-width: 60em) {
+/* @media (max-width: 60em) {
   body {
     padding: 3rem;
   }
@@ -106,4 +106,113 @@ body {
 .grid .card__btn:hover span,
 .grid .card__btn:active span {
   margin-left: 1.5rem;
+} */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+} */
+
+@media (max-width: 60em) {
+  body {
+    padding: 2rem;
+  }
+}
+
+.grid {
+  padding: 5%;
+  margin: 5%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+@media (max-width: 60em) {
+  .grid {
+    grid-gap: 2rem;
+  }
+}
+
+.grid .card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba(0, 5, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+  background: linear-gradient(45deg, #d1e6e1 0%, #8bb9b7 100%);
+  height: auto;
+}
+
+.grid .card:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.grid .card__img {
+  display: block;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.grid .card__content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-row-gap: 1.5rem;
+  padding: 1.5rem;
+  height: auto;
+}
+
+.grid .card__header {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #0d0d0d;
+}
+
+.grid .card__text {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  color: #3d3d3d;
+  margin-bottom: 1.8rem;
+}
+
+.grid .card__btn {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #101013;
+  background: linear-gradient(45deg, #1aa2cf 0%, #8200f4 100%);
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.grid .card__btn span {
+  margin-left: 0.8rem;
+  transition: 0.2s;
+}
+
+.grid .card__btn:hover,
+.grid .card__btn:active {
+  background: linear-gradient(45deg, #1acfa8 0%, #077b75 100%);
+  color: #fff;
+}
+
+.grid .card__btn:hover span,
+.grid .card__btn:active span {
+  margin-left: 1rem;
 }

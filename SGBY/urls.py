@@ -24,7 +24,7 @@ urlpatterns = [
     path('login/', views.LoginPage, name='login'),
     path('', include('Pankh.urls')),
     path('', include('courses.urls')),
-    path('logout/', views.LogoutPage, name='logout'),
+    path('signout/', views.signout, name='signout'),
     # path('Courses/class1/class1_videos',coursePage,name='class/class1'),
     # path('Courses/class1/{',coursePage2,name='class/class2'),
     # path('Courses/cp/',coursePage2,name='class/cp')

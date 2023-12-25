@@ -59,14 +59,19 @@ def coursePage(request):
 #     # return render(request, "index.html", context=context)
 #     --------------------ended----------------------------------
 def coursePage2(request, slug):
-    course = Course.objects.get(slug=slug)
-    serial_number = request.GET.get('lecture')
-    videos = course.video_set.all().order_by("serial_number")
+    if request.user.is_authenticated is False:
+        return redirect("login")
+    else:
 
-    if serial_number is None:
-        serial_number = 1
+        user = request.user
+        course = Course.objects.get(slug=slug)
+        serial_number = request.GET.get('lecture')
+        videos = course.video_set.all().order_by("serial_number")
 
-    video = Video.objects.get(serial_number=serial_number, course=course)
+        if serial_number is None:
+            serial_number = 1
+
+        video = Video.objects.get(serial_number=serial_number, course=course)
 
     # if (video.is_preview is False):
     #     if request.user.is_authenticated is False:
@@ -78,11 +83,11 @@ def coursePage2(request, slug):
     #         except:
     #             return redirect("check-out", slug=course.slug)
 
-    context = {
-        "course": course,
-        "video": video,
-        'videos': videos
-    }
+        context = {
+          "course": course,
+          "video": video,
+          'videos': videos
+        }
     return render(request, template_name="cp.html", context=context)
 # courses/views.py
 # courses/views.py

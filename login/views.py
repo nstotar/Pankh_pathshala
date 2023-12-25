@@ -32,21 +32,48 @@ def HomePage(request):
 #     return render(request, 'signup.html')
 
 
+# def LoginPage(request):
+#     if request.method == 'post':
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
+#         user = authenticate(request, username=username, password=password)
+#         if user is not None:
+#             login(request, user)
+#             request.session['username'] = user.username
+#
+#             return redirect('Courses')
+#         else:
+#             messages.error(request, 'Invalid login credentials.')
+#             return redirect("/login/")
+#
+#     return render(request, 'login.html')
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+
 def LoginPage(request):
     if request.method == 'POST':
         username = request.POST.get('username')
-        pass1 = request.POST.get('password')
-        user = authenticate(request, username=username, password=pass1)
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
         if user is not None:
             login(request, user)
+            request.session['username'] = user.username
             return redirect('Courses')
         else:
-            messages.error(request, '<h1 style="background-color:blue;">Invalid email or password.</h1>')
+            messages.error(request, 'Invalid login credentials.')
             return redirect("/login/")
 
     return render(request, 'login.html')
 
 
-def LogoutPage(request):
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+
+
+def signout(request ):
     logout(request)
-    return redirect('/login/')
+    return redirect("index")

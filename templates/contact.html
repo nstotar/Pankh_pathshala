@@ -18,43 +18,9 @@
     <link rel="icon" href="/static/images/pankh logo.png" type="image/x-icon" />
 </head>
 <body>
-<div class="wrapper">
-      <nav>
-        <input type="radio" class="inp" name="tab" id="home" checked />
-        <input type="radio" class="inp" name="tab" id="courses" />
-        <input type="radio" class="inp" name="tab" id="contact" />
-        <input type="radio" class="inp" name="tab" id="Blogs" />
-        <input type="radio" class="inp" name="tab" id="about" />
-        <input type="radio" class="inp" name="tab" id="Log-in" />
-        <!-- <input type="radio" name="tab" id="logo" /> -->
-        <label for="logo" class="logo">
-          <img src="/static/images/pankh logo.png" alt="Logo" class="logo"
-        /></label>
-        <label for="home" class="home"
-          ><a href="index"><i class="fas fa-home"></i>Home</a></label
-        >
-        <label for="courses" class="courses"
-          ><a href="Courses"><i class="far fa-comment"></i>Courses</a>
-        </label
-        >
-        <label for="contact" class="contact"
-          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
-        >
-        <label for="Blogs" class="Blogs"
-          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
-        >
-        <label for="about" class="about"
-          ><a href="about"><i class="far fa-user"></i>About</a></label
-        >
-      <label for="Log-in" class="Log-in" id="Log-in">
-          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
-        </label>
-
-        <div class="tab"></div>
-      </nav>
-    </div>
-<div class="myForm">
-    <div class="container">
+{% include "nav.html" %}
+<div class="myForm ">
+    <div class="container m-3 p-3 d-flex justify-content-center">
         <div class="heading">
             <h1>GET IN TOUCH<br>
             WITH US</h1>

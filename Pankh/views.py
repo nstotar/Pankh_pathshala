@@ -39,3 +39,7 @@ def contact(request):
 
 def blogs(request):
     return render(request, "blogs.html")
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+

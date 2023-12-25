@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/nav.css" />
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
       rel="stylesheet"
@@ -24,44 +25,7 @@
     {% block start %}
     {% include "nav.html" %}
     {% endblock %}
-   <!-- <div class="wrapper">
-   <div class="wrapper">
-      <nav>
-        <input type="radio" class="inp" name="tab" id="home" checked />
-        <input type="radio" class="inp" name="tab" id="courses" />
-        <input type="radio" class="inp" name="tab" id="contact" />
-        <input type="radio" class="inp" name="tab" id="Blogs" />
-        <input type="radio" class="inp" name="tab" id="about" />
-        <input type="radio" class="inp" name="tab" id="Log-in" />
-        <input type="radio" name="tab" id="logo" />
-        <label for="logo" class="logo">
-          <img src="./static/images/pankh logo.png" alt="Logo" class="logo"
-        /></label>
-        <label for="home" class="home"
-          ><a href="index"><i class="fas fa-home"></i>Home</a></label
-        >
-        <label for="courses" class="courses"
-          ><a href="Courses"><i class="far fa-comment"></i>Courses</a>
-        </label
-        >
-        <label for="contact" class="contact"
-          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
-        >
-        <label for="Blogs" class="Blogs"
-          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
-        >
-        <label for="about" class="about"
-          ><a href="about"><i class="far fa-user"></i>About</a></label
-        >
-      <label for="Log-in" class="Log-in" id="Log-in">
-          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
-        </label>
 
-        <div class="tab"></div>
-      </nav>
-    </div> -->
-    <!-- NAVBAR ENDS HERE -->
-    <!-- Slogan and background images starts here -->
     <div
       class="slogan"
       style="
@@ -128,16 +92,31 @@
     >
       POPULAR VIDEOS
     </h2>
+    {% if request.user.is_authenticated %}
+    <p>Welcome, {{ request.session.username }}!</p>
+{% else %}
+    <p>Please log in to view this course content.</p>
+{% endif %}
     </div>
    <!-- READERS CAVE -->
 
-   <section class="home" id="home1">
+   <!-- <section class="home" id="home1">
 
     <div class="row">
         <div class="swiper books-slider">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper"> -->
+              <section class="home" id="home1">
+                <div class="row">
+                    <div class="swiper books-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Your existing swiper slides -->
+                            <a href="#" class="swiper-slide">
+                                <iframe width="400" height="300" src="https://www.youtube.com/embed/W2JcV233-Wk?si=YaD30JAFXKz_6n9h"></iframe>
+                            </a>
+                  
+            
                 <a href="#" class="swiper-slide"><iframe
-                  width="500"
+                  width="400"
                   height="300"
                   src="https://www.youtube.com/embed/W2JcV233-Wk?si=YaD30JAFXKz_6n9h"
                 >
@@ -166,15 +145,34 @@
                   src="https://www.youtube.com/embed/8r84c201br4?si=um1HIffN8gCYwwyU"
                 >
                 </iframe></a>
-            </div>
+              
+            </div>  <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
         </div>
     </div>
 </section>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.books-slider', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+
 
 <!-- custom js file link  -->
-<script src="/static/js/bjs.js"></script>
+<!-- <script src="/static/js/bjs.js"></script> -->
+
 
   </body>
 </html>

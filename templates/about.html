@@ -18,41 +18,7 @@
     <link rel="icon" href="/static/images/pankh logo.png" type="image/x-icon" />
 </head>
 <body>
-<div class="wrapper">
-      <nav>
-        <input type="radio" class="inp" name="tab" id="home" checked />
-        <input type="radio" class="inp" name="tab" id="courses" />
-        <input type="radio" class="inp" name="tab" id="contact" />
-        <input type="radio" class="inp" name="tab" id="Blogs" />
-        <input type="radio" class="inp" name="tab" id="about" />
-        <input type="radio" class="inp" name="tab" id="Log-in" />
-        <!-- <input type="radio" name="tab" id="logo" /> -->
-        <label for="logo" class="logo">
-          <img src="/static/images/pankh logo.png" alt="Logo" class="logo"
-        /></label>
-        <label for="home" class="home"
-          ><a href="index"><i class="fas fa-home"></i>Home</a></label
-        >
-        <label for="courses" class="courses"
-          ><a href="Courses"><i class="far fa-comment"></i>Courses</a>
-        </label
-        >
-        <label for="contact" class="contact"
-          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
-        >
-        <label for="Blogs" class="Blogs"
-          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
-        >
-        <label for="about" class="about"
-          ><a href="about"><i class="far fa-user"></i>About</a></label
-        >
-      <label for="Log-in" class="Log-in" id="Log-in">
-          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
-        </label>
-
-        <div class="tab"></div>
-      </nav>
-    </div>
+{% include "nav.html" %}
 {% comment %} <div class="content">
     <div class="heading">
         <h1>ABOUT US</h1>
@@ -83,13 +49,13 @@
                   We are here to serve you next level tutorial that currently in trend to match you with your expertise. Css3 transition is a learning website. where you can find many good quality content related to web development and tutorials about plugins. here we are using html, html5, css, css3, jquery & javascript along with inspirational UI design layout by professionals by using Photoshop and adobe allustrator.
                 </div>
                   <div class="btn-box">
-                      <a href="contact" class="theme-btn btn-style-one">Contact Us</a>
+                      <a href="{% url 'contact' %}" class="theme-btn btn-style-one">Contact Us</a>
                   </div>
               </div>
           </div>
 
           <!-- Image Column -->
-          <div class="image-column col-lg-6 col-md-12 col-sm-12">
+          <div class="image-column col-lg-6 col-md-10 col-sm-10">
               <div class="inner-column wow fadeInLeft">
                 <div class="author-desc">
                   <h2>PANKH FOUNDATION INDIA</h2>
@@ -101,12 +67,12 @@
           </div>
 
       </div>
-     <div class="sec-title">
+     <div class="sec-title m-1">
                       <span class="title">Our Future Goal</span>
                       <h2>We want to lead in innovation & Technology</h2>
                   </div>
     <div class="text">
-          We works on UI/UX and functionality as well so that a plugins comes with proper stucture & stunning looks which suits to your web app & website.
+          We works on UI/UX and functionality as well so that a plugins comes with proper structure & stunning looks which suits to your web app & website.
         </div>
          <div class="text">
           We take a small toolkit here and ride it well so that it is fit for your use. One who performs well and looks even better.

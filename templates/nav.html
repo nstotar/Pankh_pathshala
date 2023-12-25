@@ -42,22 +42,22 @@
           <img src="/static/images/pankh logo.png" alt="Logo" class="logo"
         /></label>
         <label for="home" class="home"
-          ><a href="index"><i class="fas fa-home"></i>Home</a></label
+          ><a href="{% url 'index' %}"><i class="fas fa-home"></i>Home</a></label
         >
         <label for="courses" class="courses"
-          ><a href="Courses/"><i class="far fa-comment"></i>Courses</a>
+          ><a href="{% url 'Courses' %}"><i class="far fa-comment"></i>Courses</a>
         </label>
         <label for="contact" class="contact"
-          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
+          ><a href="{% url 'contact' %}"><i class="far fa-envelope"></i>Contact</a></label
         >
         <label for="Blogs" class="Blogs"
-          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
+          ><a href="{% url 'blogs' %}"><i class="far fa-heart"></i>Blogs</a></label
         >
         <label for="about" class="about"
-          ><a href="about"><i class="far fa-user"></i>About</a></label
+          ><a href="{% url 'about' %}"><i class="far fa-user"></i>About</a></label
         >
         <label for="Log-in" class="Log-in" id="Log-in">
-          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
+          <a href="{% url 'login' %}"><i class="far fa-user-circle"></i> Log-in</a>
         </label>
 
         <div class="tab"></div>
