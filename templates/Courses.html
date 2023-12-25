@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>courses</title>
+    <link
+      rel="stylesheet"
+      href="/static/css/course.css
+    "
+    />
+  </head>
+  <body>
+    {% include "nav.html" %}
+
+    <div class="grid">
+      {% for course in courses %}
+      <div class="card">
+          {% if course.name == 'class 1' %}
+        <img class="card__img" src="/static/images/class-3.png" />
+          {% elif course.name == 'class2' %}
+             <img class="card__img" src="/static/images/cls2.png"/>
+           {% elif course.name == 'class3' %}
+             <img class="card__img" src="/static/images/class1.png"/>
+          {% endif%}
+        <div class="card__content">
+          <h1 class="card__header">{{ course.name }}</h1>
+          <div class="card__text-wrapper">
+            <p class="card__text">
+<!--              Class 1 is the beginners’ stage of learning new things and-->
+<!--              developing new literacy skills of young learners. In 1st Standard,-->
+<!--              they take their very first step towards their elementary school-->
+<!--              education.-->
+              {{ course.description }}
+            </p>
+          </div>
+          <a href="{{course.slug}}" style="text-decoration: none">
+            <button class="card__btn">Explore <span>&rarr;</span></button></a
+          >
+        </div>
+      </div>
+      {% endfor %}
+
+<!--      <div class="card">-->
+<!--        <img-->
+<!--          class="card__img"-->
+<!--          src="/static/images/cls2.png"-->
+<!--          alt="Desert"-->
+<!--          width="200px"-->
+<!--          height="200px"-->
+<!--        />-->
+<!--        <div class="card__content">-->
+<!--          <h1 class="card__header">Class 2</h1>-->
+<!--          <div class="card__text-wrapper">-->
+<!--            <p class="card__text">-->
+<!--              Class 2 is the stage of learning new things and Engaging-->
+<!--              activities like storytelling, games, and songs can be effective in-->
+<!--              making the learning process enjoyable for young learners. Teachers-->
+<!--            </p>-->
+<!--          </div>-->
+
+<!--          <a href="cp/" style="text-decoration: none">-->
+<!--            <button class="card__btn">Explore <span>&rarr;</span></button></a-->
+<!--          >-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      <div class="card">-->
+<!--        <img class="card__img" src="/static/images/class1.png" />-->
+<!--        <div class="card__content">-->
+<!--          <h1 class="card__header">Class 3</h1>-->
+<!--          <div class="card__text-wrapper">-->
+<!--            <p class="card__text">-->
+<!--              Teaching English to 3rd graders involves introducing foundational-->
+<!--              language skills in an engaging and interactive way. The focus is-->
+<!--              on developing basic reading, writing, listening, and speaking-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <a href="class1/" style="text-decoration: none">-->
+<!--            <button class="card__btn">Explore <span>&rarr;</span></button></a-->
+<!--          >-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Pankh_india</title>
+     <!-- Swiper CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+      <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+    <link rel="stylesheet" href="/static/css/contact.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" href="/static/images/pankh logo.png" type="image/x-icon" />
+</head>
+<body>
+<div class="wrapper">
+      <nav>
+        <input type="radio" class="inp" name="tab" id="home" checked />
+        <input type="radio" class="inp" name="tab" id="courses" />
+        <input type="radio" class="inp" name="tab" id="contact" />
+        <input type="radio" class="inp" name="tab" id="Blogs" />
+        <input type="radio" class="inp" name="tab" id="about" />
+        <input type="radio" class="inp" name="tab" id="Log-in" />
+        <!-- <input type="radio" name="tab" id="logo" /> -->
+        <label for="logo" class="logo">
+          <img src="/static/images/pankh logo.png" alt="Logo" class="logo"
+        /></label>
+        <label for="home" class="home"
+          ><a href="index"><i class="fas fa-home"></i>Home</a></label
+        >
+        <label for="courses" class="courses"
+          ><a href="Courses"><i class="far fa-comment"></i>Courses</a>
+        </label
+        >
+        <label for="contact" class="contact"
+          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
+        >
+        <label for="Blogs" class="Blogs"
+          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
+        >
+        <label for="about" class="about"
+          ><a href="about"><i class="far fa-user"></i>About</a></label
+        >
+      <label for="Log-in" class="Log-in" id="Log-in">
+          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
+        </label>
+
+        <div class="tab"></div>
+      </nav>
+    </div>
+<div class="myForm">
+    <div class="container">
+        <div class="heading">
+            <h1>GET IN TOUCH<br>
+            WITH US</h1>
+        </div>
+        {% comment %} <form>
+            <div class="c1">
+            <table border="1">
+                <input type="text" placeholder="First Name"><br><br>
+                <input type="text" placeholder="Last Name"><br><br>
+                <input type="email" placeholder="email"><br><br>
+                <input type="text" placeholder="Organisation Name"><br><br>
+                <input type="message" placeholder="Message"><br><br>
+                <button>Send</button>
+            </table>
+            </div>
+        </form> {% endcomment %}
+
+        {% comment %} <div class="contact-info-content">
+          <h4>Address</h4>
+          <p>4671 Sugar Camp Road,<br/> Owatonna, Minnesota, <br/>55060</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+
+        <div class="contact-info-content">
+          <h4>Phone</h4>
+          <p>571-457-2321</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="contact-info-content">
+          <h4>Email</h4>
+         <p>ntamerrwael@mfano.ga</p>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+    <div class="contact-form">
+      <form action="" id="contact-form">
+        <h2>Send Message</h2>
+        <div class="input-box">
+          <input type="text" required="true" name="">
+          <span>Full Name</span>
+        </div>
+
+        <div class="input-box">
+          <input type="email" required="true" name="">
+          <span>Email</span>
+        </div>
+
+        <div class="input-box">
+          <textarea required="true" name=""></textarea>
+          <span>Type your Message...</span>
+        </div>
+
+        <div class="input-box">
+          <input type="submit" value="Send" name="">
+        </div>
+      </form>
+    </div>
+
+  </div>
+    </div>
+</div>
+</body>
+</html>

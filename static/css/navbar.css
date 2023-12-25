@@ -1,0 +1,92 @@
+.ngologo {
+  margin-top: -8%;
+  margin-bottom: 2%;
+  background-color: white;
+  width: 100%;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  padding: 1%;
+  margin: 2%;
+  margin-left: 12%;
+  margin-bottom: 11%;
+  width: 100%;
+  max-width: 700px;
+  background: linear-gradient(45deg, #1acfa8 0%, #077b75 100%);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  align-items: center;
+
+  /* border-color: rgba(129, 96, 221); */
+}
+.search-bar input {
+  background: transparent;
+  backface-visibility: hidden;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+/* Slider */
+
+.home .row {
+  display: inline;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 11.5rem;
+}
+
+.home .row .content {
+  flex: 1 1 42rem;
+}
+
+.home .row .books-slider {
+  flex: 1 1 42rem;
+  text-align: center;
+  margin-top: 7%;
+  padding-top: 2%;
+  background: linear-gradient(45deg, #1acfa8 0%, #077b75 100%);
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.home .row .books-slider a img {
+  height: 22rem;
+}
+
+.home .row .books-slider a:hover img {
+  transform: scale(0.9);
+}
+
+/* .home .row .books-slider .stand {
+  width: 100%;
+  margin-top: -3rem;
+} */
+
+.home .row .content h3 {
+  padding: 2rem;
+  width: 80px;
+  color: rgb(220, 8, 8);
+  font-size: 600%;
+}
+
+.home .row .content p {
+  width: 800px;
+  color: rgb(16, 203, 227);
+  font-size: 300%;
+  line-height: 2rem;
+  padding: 2rem;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Pankh_india</title>
+     <!-- Swiper CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+      <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+    <link rel="stylesheet" href="/static/css/nav.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" href="/static/images/pankh logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- <div class="card"> -->
+    <!-- NAVIGATION BAR -->
+    {% block start %}
+    {% include "nav.html" %}
+    {% endblock %}
+   <!-- <div class="wrapper">
+   <div class="wrapper">
+      <nav>
+        <input type="radio" class="inp" name="tab" id="home" checked />
+        <input type="radio" class="inp" name="tab" id="courses" />
+        <input type="radio" class="inp" name="tab" id="contact" />
+        <input type="radio" class="inp" name="tab" id="Blogs" />
+        <input type="radio" class="inp" name="tab" id="about" />
+        <input type="radio" class="inp" name="tab" id="Log-in" />
+        <input type="radio" name="tab" id="logo" />
+        <label for="logo" class="logo">
+          <img src="./static/images/pankh logo.png" alt="Logo" class="logo"
+        /></label>
+        <label for="home" class="home"
+          ><a href="index"><i class="fas fa-home"></i>Home</a></label
+        >
+        <label for="courses" class="courses"
+          ><a href="Courses"><i class="far fa-comment"></i>Courses</a>
+        </label
+        >
+        <label for="contact" class="contact"
+          ><a href="contact/"><i class="far fa-envelope"></i>Contact</a></label
+        >
+        <label for="Blogs" class="Blogs"
+          ><a href="blogs"><i class="far fa-heart"></i>Blogs</a></label
+        >
+        <label for="about" class="about"
+          ><a href="about"><i class="far fa-user"></i>About</a></label
+        >
+      <label for="Log-in" class="Log-in" id="Log-in">
+          <a href="login"><i class="far fa-user-circle"></i> Log-in</a>
+        </label>
+
+        <div class="tab"></div>
+      </nav>
+    </div> -->
+    <!-- NAVBAR ENDS HERE -->
+    <!-- Slogan and background images starts here -->
+    <div
+      class="slogan"
+      style="
+        background-image: url('/static/images/Background.jpg');
+        /* margin-top: 20%; */
+        padding: 14%;
+        background-repeat:repeat-x;
+        width: 100%;
+      "
+    >
+    <!-- SEARCH BAR -->
+    <div class="container">
+
+      <form action="https://www.google.com/search" method="get"  class="search-bar" traget="_blank">
+          <input type="text" placeholder="search any thing" name="q">
+          <button type="submit">  <i class="fas fa-search"></i></button>
+
+      </form>
+
+</div>
+
+      <h1>
+        <p
+          style="
+            color: rgb(15, 15, 17);
+            font-family: monospace;
+            margin-left: 15%;
+            text-shadow: 2px 0.5px white;
+            display: grid;
+            width: 80%;
+            border-radius: 50px;
+            box-shadow: 0 5px 10px #848c8f;
+          "
+        >
+          <span style="color: rgb(29, 115, 214); text-decoration: underline">
+            Pankh Paathshala </span
+          ><br />
+          - An initiative to educate underprivileged <br />children.
+        </p>
+      </h1>
+    </div>
+    <!-- </div> -->
+    <!-- Slogan and background images Ends here -->
+    <div class="ngologo">
+      <img
+        src="/static/images/pankh_NGO.jpeg
+        "
+        alt="logo"
+        width="20%"
+        height="20%"
+      />
+    </div>
+    <h2
+      style="
+        color: rgb(0, 7, 7);
+        background-color: rgb(8, 224, 195);
+        margin-left: 10%;
+        display: flex;
+        float: left;
+        border-radius: 25px;
+        box-shadow: 0 5px 10px rgba(214, 6, 6, 0.25);
+        padding: 0.5%;
+      "
+    >
+      POPULAR VIDEOS
+    </h2>
+    </div>
+   <!-- READERS CAVE -->
+
+   <section class="home" id="home1">
+
+    <div class="row">
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide"><iframe
+                  width="500"
+                  height="300"
+                  src="https://www.youtube.com/embed/W2JcV233-Wk?si=YaD30JAFXKz_6n9h"
+                >
+                </iframe> </a>
+                <a href="#" class="swiper-slide"><iframe
+                  width="400"
+                  height="300"
+                  src="https://www.youtube.com/embed/Y_6XvAPNmoA?si=P2gHaV75bqlKhZ5k"
+                >
+                </iframe></a>
+                <a href="#" class="swiper-slide"><iframe
+                  width="400"
+                  height="300"
+                  src="https://www.youtube.com/embed/S8khuHqaMf0?si=l-SbX53p-28yl8zK"
+                >
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y_6XvAPNmoA?si=-1Cd_uWXqJmnZ09s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a href="#" class="swiper-slide"><iframe
+                  width="400"
+                  height="300"
+                  src="https://www.youtube.com/embed/25zG9vvLUJA?si=3jv0jPa5winOgS11"
+                >
+                </iframe></a>
+                <a href="#" class="swiper-slide"><iframe
+                  width="400"
+                  height="300"
+                  src="https://www.youtube.com/embed/8r84c201br4?si=um1HIffN8gCYwwyU"
+                >
+                </iframe></a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/static/js/bjs.js"></script>
+
+  </body>
+</html>
