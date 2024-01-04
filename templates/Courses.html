@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>courses</title>
+    <title>courses1</title>
     <link rel="stylesheet" href="/static/css/course.css" />
   </head>
   <body>
+
+
+    <!-- NAVIGATION BAR -->
+    {% block start %}
     {% include "nav.html" %}
+    {% endblock %}
 
     <div class="grid">
       {% for course in courses %}
@@ -31,5 +36,6 @@
       </div>
       {% endfor %}
     </div>
+  {% include 'footer.html' %}
   </body>
 </html>

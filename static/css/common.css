@@ -1,14 +1,13 @@
-.price {
-    font-size: 20px;
+*{
+    margin:auto;
 }
-
 .display-5{
     font-size: 35px;
 }
 
 .display-6{
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 300px;
 }
 
 .overflow-y-scroll{

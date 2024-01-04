@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="static/courses/css/scrollbar.css">
 <link rel="stylesheet" href="static/courses/css/common.css">
 
@@ -49,19 +49,19 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
             <!-- course details -->
 
             <div class="container-fluid " style="background-image: url('/static/images/Background.jpg');">
-    
+
             <div class=" rounded-right  p-3 d-flex justify-content-center">
-                <div class="card mx-3 mb-2 bg-secondary text-white">
+                <div class="card mx-3 mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">{{course.name}}</h5>
+                        <h5 class="card-title">Pankh Patashala videos</h5>
                         <p class="card-text"></p>
                     </div>
                 </div>
             </div>
         <div>
-            
+
         <br>
-        <div class="card p-3 m-1">
+        <div class="card p-4 m-1">
             <div class="row p-3 bg-dark">
                 <!-- youtube player -->
                 <div class="col p-3">
@@ -75,6 +75,7 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
                 <!-- leacture list -->
                 <div class="col-3 p-3 bg-dark ">
+                    <h2 class="btn justify-content-right mx-3 mb-2 btn-danger">{{video.course}} Videos</h2>
                     <ul id='video_list' class="list-group overflow-y-scroll">
 
                         {% for v in videos %}
@@ -91,51 +92,62 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
                             </li>
                         {% endfor %}
                     </ul>
+
                 </div>
+
             </div>
 
         </div>
+
 <!-- -----------------------------------courseName------------------------------------------------ -->
 <div class="mt-3 rounded-right  p-3 d-flex justify-content-center">
     <div class="card bg-dark">
         <div class="card-body">
-            <h5 class="card-title  text-info">{{video.title}}</h5>
-        </div>
-    </div>
-</div>
-<!-- -----------------------------------courseName END HERE------------------------------------------------ -->
-        <!-- Prerequite -->
-        <div class="mt-3  rounded-right  p-3 d-flex justify-content-center">
-            <div class="card bg-dark">
-                <div class="card-body">
-                    <h5 class="card-title text-info">Description</h5>
-                    <p class="card-text">
-                    <ol type="none">
-                       
-                        <li class="text-primary">{{course.description}}</li>
+            <h5 class="card-title  text-info"><span class="text-white ">Title:</span><br> <br>{{video.title}}</h5>
+                <br><br>
+              <h5 class=" mx-2 m-3 card-title text-White">Description</h5>
+            <ol type="none">
+
+                        <li class="text-info">{{course.description}}</li>
                         <li></li>
-                 
-                    </ol>
-                    </p>
-                </div>
-            </div>
+            </ol>
         </div>
 
-        <!-- Learnngs -->
-        <div class="mt-3 rounded-right  p-3 d-flex justify-content-center">
-            <div class="card bg-dark">
-                <div class="card-body">
-                    <h5 class="card-title text-info">Tutor</h5>
-                    <p class="card-text .bg-dark">
-                    <ol type="none">
-                        
-                        <li class="text-primary">{{video.title}}</li>
-                        
-                    </ol>
-                    </p>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
+<!--&lt;!&ndash; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;courseName END HERE&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+<!--        &lt;!&ndash; Prerequite &ndash;&gt;-->
+<!--        <div class="mt-3  rounded-right  p-3 d-flex justify-content-center">-->
+<!--            <div class="card bg-dark">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title text-White">Description</h5>-->
+<!--                    <p class="card-text">-->
+<!--                    <ol type="none">-->
+<!--                       -->
+<!--                        <li class="text-info">{{course.description}}</li>-->
+<!--                        <li></li>-->
+<!--                 -->
+<!--                    </ol>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Learnngs &ndash;&gt;-->
+<!--        <div class="mt-3 rounded-right  p-3 d-flex justify-content-center">-->
+<!--            <div class="card bg-dark">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title text-White">Tutor</h5>-->
+<!--                    <p class="card-text .bg-dark">-->
+<!--                    <ol type="none">-->
+<!--                        -->
+<!--                        <li class="text-info">{{video.course}}</li>-->
+<!--                        -->
+<!--                    </ol>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!-- learning end -->
         <br>
@@ -143,7 +155,9 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
         <br>
 
     </div>
-
 </div>
+<button type="button" class="btn justify-content-right mx-3 mb-2 btn-danger">Download assignments <i class='fas fa-file-download' style='font-size:20px;color:white'></i></button>
+
+{% include 'footer.html' %}
 </body>
 </html>

@@ -19,6 +19,23 @@
 </head>
 <body>
 {% include "nav.html" %}
+<!--GOOGLE MAP -->
+<div class="container m-3 p-3 d-flex justify-content-left">
+      <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=Pankh%20Foundation%20chikodi%20&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 490px; height: 330px;"></iframe><style>.mapouter{position:relative;height:330px;width:490px;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}</style><a href="https://blooketjoin.org/blooket-play/">blooket play</a><style>.gmap_canvas{overflow:hidden;height:330px;width:490px}.gmap_canvas iframe{position:relative;z-index:2}</style></div></div>
+
+<div class="container m-3 p-3  justify-content-right">
+    	<p>T.M.C. No.4/1/C, Behind Indian Oil Petrol Pump, Near Head Post Office,<br>
+                                CHIKODI - 591 201<br>
+                            <p><span class="collig"><b>Dist :</b></span> Belagavi<br></p>
+                            <p><span class="collig"><b>State :</b></span> Karnataka, (India)</p>
+                            <p><span class="collig"><b>Phone :</b></span> +91 9480276047</p>
+							<p><span class="collig"><b>Email :</b></span> pankh.handicrafts@gmail.com</p>
+							<p><span class="collig"><b>Fax :</b></span> +91 9480276047</p>
+
+</div>
+</div>
+<!--INFO ABOUT PANKH-->
+
 <div class="myForm ">
     <div class="container m-3 p-3 d-flex justify-content-center">
         <div class="heading">
@@ -94,5 +111,9 @@
   </div>
     </div>
 </div>
+ {% block start %}
+    {% include "footer.html" %}
+    {% endblock %}
+
 </body>
 </html>

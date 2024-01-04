@@ -9,7 +9,9 @@
   </head>
 
   <body>
-  <h1 style="color:green;text-align:center;margin-top:2%"> {% if request.user.is_authenticated %} you are already logged in mr/mrs:-<span style="color:blue;font-weight:200px"> {{ request.session.username }}</span>{% endif %}</h1>
+  {% if request.user.is_authenticated %}    {% include "logout.html" %}
+  {% else %}
+
     <div class="card">
       <div class="info">
         <img
@@ -20,12 +22,12 @@
       </div>
 
       <div class="form-container">
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'login'%}" method="post">
           {% csrf_token %}
           <input
             type="text"
             name="username"
-            placeholder="Enter your username"
+            placeholder="Enter your Email"
           />
           <input
             type="password"
@@ -39,15 +41,19 @@
             value="login now"
             class="form-btn"
           />
-          <p> <a href="{% url 'signout' %}"><br>Logout</a></p>
+          <p>don't have an account? <a href="{% url 'contact' %}">contact to register</a></p>
           <br />
-<!--          <p><a href="login2.php">User Login</a></p>-->
+          <p><a href="{% url 'signout' %}">Logout</a>
+            <br>
+          <a class="forget-p" href="{% url 'about' %}">  About-us </a></p>
           <br />
           <p>
-            <a class="forget-p" href="forget.php"> Forgot your password </a>
           </p>
         </form>
       </div>
+
+      {% endif %}
     </div>
+      {% include 'footer.html' %}
   </body>
 </html>

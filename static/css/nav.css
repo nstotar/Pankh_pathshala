@@ -119,50 +119,53 @@ body {
 } */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  margin: 0;
   font-family: "Poppins", sans-serif;
+}
+html,
+body {
+
+  height: 2%;
+
+  text-align: center;
+}
+.card {
+  background-image: url("./static/images/Background.jpg");
+  background-repeat: no-repeat;
 }
 
 .wrapper {
   margin-top: 4%;
+  height: auto;
   width: 100%;
   background: #fff;
+  line-height: 60px;
   border-radius: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+  float: right;
 }
-
+.wrapper nav .logo {
+  margin: auto;
+  padding-right: 20px;
+  width: 50%;
+  height: auto;
+  justify-self: center;
+}
 .wrapper nav {
   position: relative;
   display: flex;
-  flex-wrap: wrap; /* Allow navigation items to wrap to the next line on smaller screens */
 }
-
 .wrapper nav label {
   flex: 1;
   width: 100%;
   z-index: 1;
   cursor: pointer;
 }
-
 .wrapper nav label a {
   position: relative;
-  z-index: -1;
+  z-index: 2;
   pointer-events: painted;
   color: #1d1f20;
   font-size: 20px;
@@ -171,33 +174,67 @@ body {
   transition: color 0.6s ease;
   padding: 20px;
 }
-
-.wrapper nav #logo {
-  flex-basis: 100%; /* Make the logo take up the full width on smaller screens */
-}
-
-.wrapper nav #Log-in {
-  order: -1; /* Move the Log-in label to the beginning on smaller screens */
-}
-
-@media (max-width: 768px) {
-  .wrapper nav label {
-    flex-basis: 100%; /* Make each label take up the full width on smaller screens */
-  }
-}
-
 .wrapper nav #logo:hover ~ label.logo,
-.wrapper nav label:hover a {
+.wrapper nav #home:hover ~ label.home a,
+.wrapper nav #courses:hover ~ label.courses a,
+.wrapper nav #contact:hover ~ label.contact a,
+.wrapper nav #Log-in:hover ~ label.Log-in a,
+.wrapper nav #Blogs:hover ~ label.Blogs a,
+.wrapper nav #about:hover ~ label.about a {
   color: #fff;
-  width: 100%;
+
+  width: 14%;
   border-radius: 50px;
   background: linear-gradient(45deg, #1aa2cf 0%, #8200f4 100%);
   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .wrapper nav label a i {
   font-size: 25px;
   margin: 1 7px;
+  z-index:2;
+} */
+/* ------------------------------------------------------------- */
+/* .inp{
+  position: absolute;
+  top: 0;
+  left: 20rem;
+  z-index: 100;
+
+} */
+.wrapper nav .tab {
+  position: absolute;
+  height: 100%;
+  width: 14%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #1aa2cf 0%, #8200f4 100%);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper nav #home:checked ~ .tab {
+  left: 15%;
+}
+.wrapper nav #courses:checked ~ .tab {
+  left: 29%;
+}
+.wrapper nav #contact:checked ~ .tab {
+  left: 43.5%;
+}
+.wrapper nav #Blogs:checked ~ .tab {
+  left: 58%;
+}
+.wrapper nav #about:checked ~ .tab {
+  left: 72%;
+}
+.wrapper nav #Log-in:checked ~ .tab {
+  left: 86%;
+}
+.wrapper nav input {
+  display: none;
+}
+.card .slogan {
+  color: #8200f4;
 }
 
 /* Add additional styling for the tab and other elements as needed */

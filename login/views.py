@@ -61,6 +61,7 @@ def LoginPage(request):
         if user is not None:
             login(request, user)
             request.session['username'] = user.username
+            # request.session['email']=authenticate.email
             return redirect('Courses')
         else:
             messages.error(request, 'Invalid login credentials.')

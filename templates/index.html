@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
@@ -8,10 +7,10 @@
      <!-- Swiper CSS -->
      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
       <!-- CSS -->
-    <link rel="stylesheet" href="/static/css/style.css" />
+<!--    <link rel="stylesheet" href="/static/css/style.css" />-->
     <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/nav.css" />
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link
       rel="stylesheet"
@@ -92,11 +91,6 @@
     >
       POPULAR VIDEOS
     </h2>
-    {% if request.user.is_authenticated %}
-    <p>Welcome, {{ request.session.username }}!</p>
-{% else %}
-    <p>Please log in to view this course content.</p>
-{% endif %}
     </div>
    <!-- READERS CAVE -->
 
@@ -113,8 +107,8 @@
                             <a href="#" class="swiper-slide">
                                 <iframe width="400" height="300" src="https://www.youtube.com/embed/W2JcV233-Wk?si=YaD30JAFXKz_6n9h"></iframe>
                             </a>
-                  
-            
+
+
                 <a href="#" class="swiper-slide"><iframe
                   width="400"
                   height="300"
@@ -131,7 +125,7 @@
                   width="400"
                   height="300"
                   src="https://www.youtube.com/embed/S8khuHqaMf0?si=l-SbX53p-28yl8zK"
-                >
+                ></iframe></a>
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y_6XvAPNmoA?si=-1Cd_uWXqJmnZ09s" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <a href="#" class="swiper-slide"><iframe
                   width="400"
@@ -145,7 +139,7 @@
                   src="https://www.youtube.com/embed/8r84c201br4?si=um1HIffN8gCYwwyU"
                 >
                 </iframe></a>
-              
+
             </div>  <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
@@ -172,7 +166,7 @@
 
 <!-- custom js file link  -->
 <!-- <script src="/static/js/bjs.js"></script> -->
-
+{% include 'footer.html' %}
 
   </body>
 </html>
