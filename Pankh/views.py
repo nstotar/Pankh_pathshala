@@ -43,3 +43,21 @@ from django.contrib.auth import logout
 from django.shortcuts import redirect
 
 
+# views.py
+from django.shortcuts import render, redirect
+from Form.forms import ContactForm
+from .models import ContactMessage
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        context = {
+            'form': form,
+        }
+        if form.is_valid():
+            form.save()  # This will save the data to the ContactMessage model
+            return redirect('index')  # Redirect to a success page
+    else:
+        form = ContactForm()
+
+    return render(request, 'contact.html', {'form': form})

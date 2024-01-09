@@ -13,6 +13,10 @@ urlpatterns = [
     path('blogs/', views.blogs, name='blogs'),
     # path('login/', views.login, name='login'),
     path('logout/', RedirectView.as_view(url='/admin/logout/')),
+
+    path('contact_view/', views.contact_view, name='contact_view'),
+    # Add other URLs as needed
+
     # path('login/', views.LoginPage, name='login'),
 
 
