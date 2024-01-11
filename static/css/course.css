@@ -46,7 +46,7 @@ html {
   cursor: pointer;
   transition: 0.2s;
   background: linear-gradient(45deg, #d1e6e1 0%, #8bb9b7 100%);
-  height: 45%;
+  height: 55%;
 }
 
 @media (max-width: 60em) {
@@ -64,13 +64,14 @@ html {
 .grid .card__img {
   display: block;
   width: 100%;
-  height: 22rem;
+  height: 24rem;
   object-fit: fill;
 }
 
 @media (max-width: 60em) {
   .grid .card__img {
     height: auto;
+    display:inline;
   }
 }
 
@@ -79,7 +80,7 @@ html {
   grid-template-rows: auto 1fr auto;
   grid-row-gap: 2rem;
   padding: 2rem;
-  height: 80%;
+  height: 60%;
 }
 
 .grid .card__header {

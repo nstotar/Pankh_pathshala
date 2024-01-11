@@ -17,13 +17,14 @@
     <div class="grid">
       {% for course in courses %}
       <div class="card">
-        {% if course.name == 'class 1' %}
-        <img class="card__img" src="/static/images/class-3.png" />
-        {% elif course.name == 'class2' %}
-        <img class="card__img" src="/static/images/cls2.png" />
-        {% elif course.name == 'class3' %}
-        <img class="card__img" src="/static/images/class1.png" />
-        {% endif%}
+<!--        {% if course.name == 'class 1' %}-->
+<!--        <img class="card__img" src="/static/images/class-3.png" />-->
+<!--        {% elif course.name == 'class2' %}-->
+<!--        <img class="card__img" src="/static/images/cls2.png" />-->
+<!--        {% elif course.name == 'class3' %}-->
+<!--        <img class="card__img" src="/static/images/class1.png" />-->
+<!--        {% endif%}-->
+        <img class="card-img-top" src="{{course.thumbnail.url}}" alt="Card image cap">
         <div class="card__content">
           <h1 class="card__header">{{ course.name }}</h1>
           <div class="card__text-wrapper">
