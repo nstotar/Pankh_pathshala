@@ -1,220 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title> Pankh_india</title>
-     <!-- Swiper CSS -->
-     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-      <!-- CSS -->
+    <title>Pankh_india</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- CSS -->
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/navbar.css" />
     <link rel="stylesheet" href="/static/css/nav.css" />
-    <link rel="stylesheet" href="/static/css/about.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/about.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="icon" href="/static/images/pankh logo.png" type="image/x-icon" />
-</head>
-<body>
-<!--<div class="wrapper">-->
-<!--      <nav>-->
-<!--        <input type="radio" class="inp" name="tab" id="home" />-->
-<!--        <input type="radio" class="inp" name="tab" id="courses" />-->
-<!--        <input type="radio" class="inp" name="tab" id="contact" />-->
-<!--        <input type="radio" class="inp" name="tab" id="Blogs" />-->
-<!--        <input type="radio" class="inp" name="tab" id="about" checked />-->
-<!--        <input type="radio" class="inp" name="tab" id="Log-in" />-->
-<!--        &lt;!&ndash; <input type="radio" name="tab" id="logo" /> &ndash;&gt;-->
-<!--        <label for="logo" class="logo">-->
-<!--          <img src="/static/images/pankh logo.png" alt="Logo" class="logo"-->
-<!--        /></label>-->
-<!--        <label for="home" class="home"-->
-<!--          ><a href="/index"><i class="fas fa-home"></i>Home</a></label-->
-<!--        >-->
-<!--        <label for="courses" class="courses"-->
-<!--          ><a href="/Courses"><i class="far fa-comment"></i>Courses</a>-->
-<!--        </label-->
-<!--        >-->
-<!--        <label for="contact" class="contact"-->
-<!--          ><a href="/contact"><i class="far fa-envelope"></i>Contact</a></label-->
-<!--        >-->
-<!--        <label for="Blogs" class="Blogs"-->
-<!--          ><a href="/blogs"><i class="far fa-heart"></i>Blogs</a></label-->
-<!--        >-->
-<!--        <label for="about" class="about"-->
-<!--          ><a href="/about"><i class="far fa-user" ></i>About</a></label-->
-<!--        >-->
-<!--      <label for="Log-in" class="Log-in" id="Log-in">-->
-<!--          <a href="/login"><i class="far fa-user-circle"></i> Log-in</a>-->
-<!--        </label>-->
+  </head>
+  <body>
+    <!--<div class="wrapper">-->
+    <!--      <nav>-->
+    <!--        <input type="radio" class="inp" name="tab" id="home" />-->
+    <!--        <input type="radio" class="inp" name="tab" id="courses" />-->
+    <!--        <input type="radio" class="inp" name="tab" id="contact" />-->
+    <!--        <input type="radio" class="inp" name="tab" id="Blogs" />-->
+    <!--        <input type="radio" class="inp" name="tab" id="about" checked />-->
+    <!--        <input type="radio" class="inp" name="tab" id="Log-in" />-->
+    <!--        &lt;!&ndash; <input type="radio" name="tab" id="logo" /> &ndash;&gt;-->
+    <!--        <label for="logo" class="logo">-->
+    <!--          <img src="/static/images/pankh logo.png" alt="Logo" class="logo"-->
+    <!--        /></label>-->
+    <!--        <label for="home" class="home"-->
+    <!--          ><a href="/index"><i class="fas fa-home"></i>Home</a></label-->
+    <!--        >-->
+    <!--        <label for="courses" class="courses"-->
+    <!--          ><a href="/Courses"><i class="far fa-comment"></i>Courses</a>-->
+    <!--        </label-->
+    <!--        >-->
+    <!--        <label for="contact" class="contact"-->
+    <!--          ><a href="/contact"><i class="far fa-envelope"></i>Contact</a></label-->
+    <!--        >-->
+    <!--        <label for="Blogs" class="Blogs"-->
+    <!--          ><a href="/blogs"><i class="far fa-heart"></i>Blogs</a></label-->
+    <!--        >-->
+    <!--        <label for="about" class="about"-->
+    <!--          ><a href="/about"><i class="far fa-user" ></i>About</a></label-->
+    <!--        >-->
+    <!--      <label for="Log-in" class="Log-in" id="Log-in">-->
+    <!--          <a href="/login"><i class="far fa-user-circle"></i> Log-in</a>-->
+    <!--        </label>-->
 
-<!--        <div class="tab"></div>-->
-<!--      </nav>-->
-<!--    </div>-->
- {% block start %}
-    {% include "nav.html" %}
-    {% endblock %}
+    <!--        <div class="tab"></div>-->
+    <!--      </nav>-->
+    <!--    </div>-->
+    {% block start %} {% include "nav.html" %} {% endblock %}
 
-<section class="about-section">
-  <div class="container">
-      <div class="row">
-          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-              <div class="inner-column">
-                  <div class="sec-title">
-<!--                      <span class="title">About Css3transition</span>-->
-                      <h2>About Us</h2>
-                  </div>
-                  <div class="text">Pankh (Foundation) was started in 2008 with an aim to bring a positive change in society. Initially, the Foundation worked only on donation activities through funds collected from well-wishers and pooled in from the founders. However, the founders of Pankh soon realized that this would have a limited impact and something more sustainable needed to be done to empower the women to earn a livelihood so that they do not depend on donations.</div>
-                <div class="text">
-                  In 2014 Pankh Handicrafts was started with an aim to provide a platform to rural women for a sustainable source of income. Not just the women, their kids and families also became a part of the cheerful and warm environs of Pankh where they learnt life skills from volunteers who spent time teaching them after their school hours.
-                </div>
-                  <div class="btn-box">
-                      <a href="/contact" class="theme-btn btn-style-one">Contact Us</a>
-                  </div>
-              </div>
+    <section class="articles">
+      <article>
+        <div class="article-wrapper">
+          <figure>
+            <img src="/static/images/recent/img4.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>About Tutors</h2>
+            <p>
+              Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
+              euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
+              lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+              egestas.
+            </p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about Tutors</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
-
-          <!-- Image Column -->
-          <div class="image-column col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="author-desc">
-                  <h2>PANKH FOUNDATION INDIA</h2>
-                  <span></span>
-                </div>
-                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Pankh Foundation India" src="/static/images/R.jpeg" alt=""></a></figure>
-
-              </div>
+        </div>
+      </article>
+      <article>
+        <div class="article-wrapper">
+          <figure>
+            <img src="/static/images/sanket.jpeg" alt="img not loaded" />
+          </figure>
+          <div class="article-body">
+            <h2>About Developers</h2>
+            <p>
+              Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
+              euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
+              lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+              egestas.
+            </p>
+            <a href="#" class="read-more">
+              Read more <span class="sr-only">about developers</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
-      </div>
-<!--      ABOUT GOUREE MANJAREKAR-->
-      <div class="container">
-      <div class="row">
-          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-              <div class="inner-column">
-                  <div class="sec-title">
-<!--                      <span class="title">About Css3transition</span>-->
-                      <h2>About Gouree Manjarekar</h2>
-                  </div>
-                  <div class="text">A post -graduate in computer application, a university rank holder in graduation, and having a job in multinational company; Gouree decided to choose something out of the box. She quit her job and settled in Chikodi, a small town in Karnataka state. Working for the rural women and children makes her happy. She loves designing new innovative products as ecofriendly alternatives for plastic.</div>
-<!--                <div class="text">-->
-<!--                  In 2014 Pankh Handicrafts was started with an aim to provide a platform to rural women for a sustainable source of income. Not just the women, their kids and families also became a part of the cheerful and warm environs of Pankh where they learnt life skills from volunteers who spent time teaching them after their school hours.-->
-<!--                </div>-->
-<!--                  <div class="btn-box">-->
-<!--                      <a href="contact" class="theme-btn btn-style-one">Contact Us</a>-->
-<!--                  </div>-->
-              </div>
+        </div>
+      </article>
+      <article>
+        <div class="article-wrapper">
+          <figure>
+            <img src="/static/images/gouree.jpeg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>About Pankh</h2>
+            <p>
+              Curabitur convallis ac quam vitae laoreet. Nulla mauris ante,
+              euismod sed lacus sit amet, congue bibendum eros. Etiam mattis
+              lobortis porta. Vestibulum ultrices iaculis enim imperdiet
+              egestas.
+            </p>
+            <a href="{% url 'aboutPankh' %}" class="read-more">
+              Read more <span class="sr-only">about Pankh</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
-    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="author-desc">
-                  <h2>Gouree Manjarekar</h2>
-                </div>
-                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Gouree Manjarekar" src="/static/images/gouree.jpeg" alt=""></a></figure>
-              </div>
-          </div>
-  </div>
-
-<br/><br/><br/><br/>
-<!-- ABOUT Manish Shanbhag-->
-<div class="container">
-      <div class="row">
-          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-              <div class="inner-column">
-                  <div class="sec-title">
-<!--                      <span class="title">About Css3transition</span>-->
-                      <h2>About Manish Shanbhag</h2>
-                  </div>
-                  <div class="text">Manish is from Belgaum. He is an engineer and holds a Masters degree in Business Administration. He currently lives and works in France and is closely associated with the operations at Pankh. Manish enjoys sports, reading, and humor. He is active on many social initiatives and believes that each one of us, in one’s own capacity, should give back to society and better the lives of people.</div>
-<!--                <div class="text">-->
-<!--                  In 2014 Pankh Handicrafts was started with an aim to provide a platform to rural women for a sustainable source of income. Not just the women, their kids and families also became a part of the cheerful and warm environs of Pankh where they learnt life skills from volunteers who spent time teaching them after their school hours.-->
-<!--                </div>-->
-<!--                  <div class="btn-box">-->
-<!--                      <a href="contact" class="theme-btn btn-style-one">Contact Us</a>-->
-<!--                  </div>-->
-              </div>
-          </div>
-    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="author-desc">
-                  <h2>Manish Shanbhag</h2>
-                </div>
-                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Manish Shanbhag" src="/static/images/Manish.jpeg" alt=""></a></figure>
-              </div>
-          </div>
-  </div>
-      </div>
-  </div>
-  </div>
-
-<br/><br/><br/><br/>
-
-<!-- ABOUT Smruti Kulkarni-->
-<div class="container">
-      <div class="row">
-          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-              <div class="inner-column">
-                  <div class="sec-title">
-<!--                      <span class="title">About Css3transition</span>-->
-                      <h2>About Smruti Kulkarni</h2>
-                  </div>
-                  <div class="text">Smruti hails from Belgaum. She is a computer science graduate and holds a Masters degree in Business Administration. Smruti strongly believes in the power of collaboration to make big things happen. She enjoys reading, writing (she’s a published author) and singing. Smruti is an advisor to Pankh.</div>
-<!--                <div class="text">-->
-<!--                  In 2014 Pankh Handicrafts was started with an aim to provide a platform to rural women for a sustainable source of income. Not just the women, their kids and families also became a part of the cheerful and warm environs of Pankh where they learnt life skills from volunteers who spent time teaching them after their school hours.-->
-<!--                </div>-->
-<!--                  <div class="btn-box">-->
-<!--                      <a href="contact" class="theme-btn btn-style-one">Contact Us</a>-->
-<!--                  </div>-->
-              </div>
-          </div>
-    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="author-desc">
-                  <h2>Smruti Kulkarni</h2>
-                </div>
-                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Smruti Kulkarni" src="/static/images/Smruti.jpeg" alt="" height="550px" width="460px"></a></figure>
-              </div>
-          </div>
-  </div>
-      </div>
-  </div>
-  </div>
-
-<br/><br/><br/><br/>
-
-<!-- ABOUT Sanket Manjarekar-->
-<div class="container">
-      <div class="row">
-          <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-              <div class="inner-column">
-                  <div class="sec-title">
-<!--                      <span class="title">About Css3transition</span>-->
-                      <h2>About Sanket Manjarekar</h2>
-                  </div>
-                  <div class="text">Sanket is a mechanical engineer and a serial entrepreneur. He is a dealer of Honda 2 wheelers and is into construction business in Chikodi. He has always believed to stay close to his roots and provide employment to the people of his birthplace</div>
-<!--                <div class="text">-->
-<!--                  In 2014 Pankh Handicrafts was started with an aim to provide a platform to rural women for a sustainable source of income. Not just the women, their kids and families also became a part of the cheerful and warm environs of Pankh where they learnt life skills from volunteers who spent time teaching them after their school hours.-->
-<!--                </div>-->
-<!--                  <div class="btn-box">-->
-<!--                      <a href="contact" class="theme-btn btn-style-one">Contact Us</a>-->
-<!--                  </div>-->
-              </div>
-          </div>
-    <div class="image-column col-lg-6 col-md-12 col-sm-12">
-              <div class="inner-column wow fadeInLeft">
-                <div class="author-desc">
-                  <h2>Sanket Manjarekar</h2>
-                </div>
-                  <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Sanket Manjarekar" src="/static/images/Sanket.jpeg" alt=""></a></figure>
-              </div>
-          </div>
-  </div>
-      </div>
-  </div>
-  </div>
-</section>
-{% include 'footer.html' %}
-</body>
+        </div>
+      </article>
+    </section>
+    {% include 'footer.html' %}
+  </body>
 </html>

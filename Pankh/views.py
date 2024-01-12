@@ -61,3 +61,5 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form})
+def aboutPankh(request):
+    return render(request,"aboutPankh.html")

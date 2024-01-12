@@ -15,6 +15,7 @@ urlpatterns = [
     path('logout/', RedirectView.as_view(url='/admin/logout/')),
 
     path('contact_view/', views.contact_view, name='contact_view'),
+    path('aboutPankh/', views.aboutPankh, name='aboutPankh'),
     # Add other URLs as needed
 
     # path('login/', views.LoginPage, name='login'),
