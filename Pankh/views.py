@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from courses.models import Course, Video
+from Pankh.models import Blogs
 
 
 def home(request):
@@ -38,7 +39,12 @@ def contact(request):
 
 
 def blogs(request):
-    return render(request, "blogs.html")
+    bgs=Blogs.objects.filter().values;
+    context={
+        'bgs':bgs
+    }
+    print(bgs)
+    return render(request, "blogs.html",context=context)
 from django.contrib.auth import logout
 from django.shortcuts import redirect
 

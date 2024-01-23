@@ -1,8 +1,10 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 
 # Create your models here.
 # models.py
 from django.db import models
+
 
 class ContactMessage(models.Model):
     name = models.CharField(max_length=100)
@@ -12,3 +14,10 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Blogs(models.Model):
+    name = models.CharField(max_length=100)
+    content = RichTextField(config_name='awesome_ckeditor')
+    def __str__(self):
+        return self.content

@@ -14,3 +14,5 @@ from django.utils.html import format_html
 class ContactMessage(admin.ModelAdmin):
     list_display = ('name','email','subject','message')
     search_fields = ('name', 'email')
+
+admin.site.register(Blogs)

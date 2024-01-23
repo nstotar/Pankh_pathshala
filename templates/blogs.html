@@ -1,15 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Blogs</title>
+    <style>
+      .container {
+        display: grid;
+        margin-top:12%;
+        width:300px
+        gap: 32px;
+      }
+      .card {
+      display:grid;
+      margin-top:2%;
+        display:grid;
+      }
+      .card:hover{
+      color:green;
+      }
+    </style>
   </head>
   <body>
-    <h1>Blogs Appears here</h1>
-    {% block start %} {% include "nav.html" %} {% endblock %}
-    <div style="background-color:White;width:200px;height:400px;">
-
+     {% include "nav.html" %}
+    <div class="container bg-dark m-auto">
+      {% for i in bgs %}
+        <div class="card bg-light mb-3">
+          <div class="card-header">{{ i.name | safe }}</div>
+          <div class="card-body">
+            <p class="card-text">{{ i.content | safe }}</p>
+          </div>
+        </div>
+      {% endfor %}
     </div>
-  {% include 'footer.html' %}
+    {% include 'footer.html' %}
   </body>
 </html>

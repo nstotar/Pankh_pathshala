@@ -58,6 +58,10 @@ class Video(models.Model):
     serial_number = models.IntegerField(null=False)
     video_id = models.CharField(max_length=100, null=False)
     is_preview = models.BooleanField(default=False)
+    assignment_name = models.CharField(max_length=100, null=True)
+    assignment_file = models.FileField(upload_to="documents/",null=True)
 
     def __str__(self):
         return self.title
+# document_manager/models.py
+

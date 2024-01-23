@@ -1,0 +1,12 @@
+<!-- templates/document_manager/document_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ document.title }}</title>
+</head>
+<body>
+    <h2>{{ document.title }}</h2>
+    <p><a href="{% url 'download_document' document.id %}">Download Document</a></p>
+</body>
+</html>

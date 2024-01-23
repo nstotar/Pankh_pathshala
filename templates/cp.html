@@ -115,49 +115,19 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
     </div>
 </div>
-<!--&lt;!&ndash; -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;courseName END HERE&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
-<!--        &lt;!&ndash; Prerequite &ndash;&gt;-->
-<!--        <div class="mt-3  rounded-right  p-3 d-flex justify-content-center">-->
-<!--            <div class="card bg-dark">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title text-White">Description</h5>-->
-<!--                    <p class="card-text">-->
-<!--                    <ol type="none">-->
-<!--                       -->
-<!--                        <li class="text-info">{{course.description}}</li>-->
-<!--                        <li></li>-->
-<!--                 -->
-<!--                    </ol>-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        &lt;!&ndash; Learnngs &ndash;&gt;-->
-<!--        <div class="mt-3 rounded-right  p-3 d-flex justify-content-center">-->
-<!--            <div class="card bg-dark">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title text-White">Tutor</h5>-->
-<!--                    <p class="card-text .bg-dark">-->
-<!--                    <ol type="none">-->
-<!--                        -->
-<!--                        <li class="text-info">{{video.course}}</li>-->
-<!--                        -->
-<!--                    </ol>-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-        <!-- learning end -->
         <br>
         <br>
         <br>
 
     </div>
 </div>
-<button type="button" class="btn justify-content-right mx-3 mb-2 btn-success">Download assignments <i class='fas fa-file-download' style='font-size:20px;color:white'></i></button>
 
+<!--<button type="button" class="btn justify-content-right mx-3 mb-2 btn-success">Download assignments <i class='fas fa-file-download' style='font-size:20px;color:white'></i></button>-->
+<button type="button" class="btn justify-content-right mx-3 mb-2 btn-success">
+    <a href="{% if video.assignment_file %} {% url 'download_assignment' video.id %} {% else %} # {% endif %}">
+       <h6 class="badge bg-success text-wrap py-2"> Download assignments <i class='fas fa-file-download' style='font-size:20px;color:white'></i></h6>
+    </a>
+</button>
 {% include 'footer.html' %}
 </body>
 </html>

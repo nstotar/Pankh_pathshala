@@ -27,5 +27,7 @@ urlpatterns = [
     path('signout/', views.signout, name='signout'),
     # path('Courses/class1/class1_videos',coursePage,name='class/class1'),
     # path('Courses/class1/{',coursePage2,name='class/class2'),
-    # path('Courses/cp/',coursePage2,name='class/cp')s
+    # path('Courses/cp/',coursePage2,name='class/cp')
 ]
+admin.site.site_header="PankhPatashala Admin panel"
+admin.site.index_title="Welcome To admin PankhPatashala"

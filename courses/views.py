@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.shortcuts import render, redirect
@@ -72,17 +72,6 @@ def coursePage2(request, slug):
             serial_number = 1
 
         video = Video.objects.get(serial_number=serial_number, course=course)
-
-    # if (video.is_preview is False):
-    #     if request.user.is_authenticated is False:
-    #         return redirect("login")
-    #     else:
-    #         user = request.user
-    #         try:
-    #             user_course = UserCourse.objects.get(course=course)
-    #         except:
-    #             return redirect("check-out", slug=course.slug)
-
         context = {
           "course": course,
           "video": video,
@@ -91,3 +80,8 @@ def coursePage2(request, slug):
     return render(request, template_name="cp.html", context=context)
 # courses/views.py
 # courses/views.py
+def download_assignment(request, video_id):
+    video = get_object_or_404(Video, id=video_id)
+    response = HttpResponse(video.assignment_file, content_type='application/force-download')
+    response['Content-Disposition'] = f'attachment; filename="{video.assignment_file.name}"'
+    return response
