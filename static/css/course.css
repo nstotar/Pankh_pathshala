@@ -17,13 +17,13 @@ html {
   }
 
   .grid {
-    margin: 3%;
+    margin: 9%;
   }
 }
 
 .grid {
   padding: 5%;
-  margin: 4%;
+  margin: 10%;
   display: grid;
   width: 114rem;
   grid-gap: 3rem;
@@ -46,7 +46,7 @@ html {
   cursor: pointer;
   transition: 0.2s;
   background: linear-gradient(45deg, #d1e6e1 0%, #8bb9b7 100%);
-  height: 55%;
+  height: 45%;
 }
 
 @media (max-width: 60em) {
@@ -63,7 +63,7 @@ html {
 
 .grid .card__img {
   display: block;
-  width: 100%;
+  width: 80%;
   height: 24rem;
   object-fit: fill;
 }
@@ -79,7 +79,7 @@ html {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-row-gap: 2rem;
-  padding: 2rem;
+  padding: 3rem;
   height: 60%;
 }
 
@@ -124,5 +124,5 @@ html {
 
 .grid .card__btn:hover span,
 .grid .card__btn:active span {
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
 }

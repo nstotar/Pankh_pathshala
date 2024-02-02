@@ -69,3 +69,9 @@ def contact_view(request):
     return render(request, 'contact.html', {'form': form})
 def aboutPankh(request):
     return render(request,"aboutPankh.html")
+
+def abouttutors(request):
+    return render(request,"abouttutors.html")
+
+def aboutdevelopers(request):
+    return render(request,"aboutdevelopers.html")

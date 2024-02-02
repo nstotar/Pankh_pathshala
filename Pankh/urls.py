@@ -16,6 +16,8 @@ urlpatterns = [
 
     path('contact_view/', views.contact_view, name='contact_view'),
     path('aboutPankh/', views.aboutPankh, name='aboutPankh'),
+    path('aboutdevelopers/', views.aboutdevelopers, name='aboutdevelopers'),
+    path('abouttutors/', views.abouttutors, name='abouttutors'),
     # Add other URLs as needed
 
     # path('login/', views.LoginPage, name='login'),
